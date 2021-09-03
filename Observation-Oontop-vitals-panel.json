@@ -1,0 +1,57 @@
+{
+  "resourceType": "Observation",
+  "id": "Oontop-vitals-panel",
+  "meta": {
+    "profile": [
+      "http://oontop.com/fhir/ig/StructureDefinition/oontop-vital-signs-panel"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 85353-1}\">Vital Signs Panel</span></p><p><b>subject</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>effective</b>: Jul 2, 2021, 7:30:00 AM</p><p><b>hasMember</b>: </p><ul><li><a href=\"Observation-Oontop-respiratory-rate.html\">Respiratory rate. Generated Summary: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span>; <span title=\"Codes: {http://loinc.org 9279-1}\">respiratory_rate</span>; effective: Jul 2, 2021, 7:30:00 AM; 26 breaths per minute</a></li><li><a href=\"Observation-Oontop-heart-rate.html\">Heart rate. Generated Summary: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span>; <span title=\"Codes: {http://loinc.org 8867-4}\">heart_rate</span>; effective: Jul 2, 2021, 7:30:00 AM; 44 beats/min</a></li><li><a href=\"Observation-Oontop-blood-pressure.html\">Blood Pressure. Generated Summary: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span>; <span title=\"Codes: {http://loinc.org 85354-9}\">Blood pressure systolic and diastolic</span>; effective: Jul 2, 2021, 7:30:00 AM</a></li><li><a href=\"Observation-Oontop-temperature.html\">Temperature. Generated Summary: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span>; <span title=\"Codes: {http://loinc.org 8310-5}\">temperature</span>; effective: Jul 2, 2021, 7:30:00 AM; 36.55556 Cel</a></li></ul></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital signs"
+        }
+      ],
+      "text": "Vital Signs"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "85353-1"
+      }
+    ],
+    "text": "Vital Signs Panel"
+  },
+  "subject": {
+    "reference": "Patient/Patient-oontop-Min"
+  },
+  "effectiveDateTime": "2021-07-02T10:30:00Z",
+  "hasMember": [
+    {
+      "reference": "Observation/Oontop-respiratory-rate",
+      "display": "Respiratory rate"
+    },
+    {
+      "reference": "Observation/Oontop-heart-rate",
+      "display": "Heart rate"
+    },
+    {
+      "reference": "Observation/Oontop-blood-pressure",
+      "display": "Blood Pressure"
+    },
+    {
+      "reference": "Observation/Oontop-temperature",
+      "display": "Temperature"
+    }
+  ]
+}

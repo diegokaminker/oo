@@ -1,0 +1,50 @@
+﻿OONTOP_IG : Validation Results
+=========================================
+
+err = 0, warn = 0, info = 0
+IG Publisher Version: 1.1.76
+Generated Mon Jul 12 15:53:46 ART 2021. FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = http://oontop.com)
+
+ Build Errors : 0 / 0 / 0
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/allergyintolerance-Oontop-Allergy-Intolerance-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/careplan-Oontop-Treatment-Plan-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/condition-Oontop-CallReason-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/condition-Oontop-Diagnosis-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/medicationrequest-Oontop-Medication-Request-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-Lab-Result-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-Pain-Score-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-blood-pressure : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-heart-rate : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-respiratory-rate : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-temperature : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-vitals-panel : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/patient-Patient-oontop-Min : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-call-reason : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-diagnosis : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-pain-score : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-treatment-plan : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-vital-signs-panel : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-patient-oontop : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/input/ImplementationGuide-com.oontop : 0 / 0 / 1
+</table>
+== n/a ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/AllergyIntolerance-Oontop-Allergy-Intolerance-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/CarePlan-Oontop-Treatment-Plan-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Condition-Oontop-CallReason-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Condition-Oontop-Diagnosis-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/MedicationRequest-Oontop-Medication-Request-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-Lab-Result-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-Pain-Score-Example.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-blood-pressure.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-heart-rate.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-respiratory-rate.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-temperature.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-vitals-panel.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Patient-Patient-oontop-Min.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-call-reason.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-diagnosis.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-pain-score.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-treatment-plan.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-vital-signs-panel.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-patient-oontop.json ==
+== /Users/diego/Dropbox/OONTOP/OOntopIG/input/ImplementationGuide-com.oontop.json ==

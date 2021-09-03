@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "Oontop-Pain-Score-Example",
+  "meta": {
+    "profile": [
+      "http://oontop.com/fhir/ig/StructureDefinition/oontop-pain-score"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 72514-3}\">Pain severity - 0-10 verbal numeric rating [Score] - Reported</span></p><p><b>subject</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>effective</b>: May 8, 2021, 11:42:07 AM</p><p><b>issued</b>: May 8, 2021, 11:42:07 AM</p><p><b>value</b>: 8 {score}</p></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "72514-3",
+        "display": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+      }
+    ],
+    "text": "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
+  },
+  "subject": {
+    "reference": "Patient/Patient-oontop-Min"
+  },
+  "effectiveDateTime": "2021-05-08T11:42:07-03:00",
+  "issued": "2021-05-08T11:42:07.561-03:00",
+  "valueQuantity": {
+    "value": 8,
+    "unit": "{score}",
+    "system": "http://unitsofmeasure.org",
+    "code": "{score}"
+  }
+}

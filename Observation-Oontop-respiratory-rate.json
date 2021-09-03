@@ -1,0 +1,46 @@
+{
+  "resourceType": "Observation",
+  "id": "Oontop-respiratory-rate",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-respiratory-rate"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}\">Vital Signs</span></p><p><b>code</b>: <span title=\"Codes: {http://loinc.org 9279-1}\">respiratory_rate</span></p><p><b>subject</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>effective</b>: Jul 2, 2021, 7:30:00 AM</p><p><b>value</b>: 26 breaths per minute</p></div>"
+  },
+  "status": "final",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        }
+      ],
+      "text": "Vital Signs"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "9279-1",
+        "display": "Respiratory rate"
+      }
+    ],
+    "text": "respiratory_rate"
+  },
+  "subject": {
+    "reference": "Patient/Patient-oontop-Min"
+  },
+  "effectiveDateTime": "2021-07-02T10:30:00Z",
+  "valueQuantity": {
+    "value": 26,
+    "unit": "breaths per minute",
+    "system": "http://unitsofmeasure.org",
+    "code": "/min"
+  }
+}

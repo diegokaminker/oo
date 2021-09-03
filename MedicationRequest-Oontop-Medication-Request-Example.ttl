@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://oontop.com/MedicationRequest/Oontop-Medication-Request-Example> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Oontop-Medication-Request-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: <span title=\"Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 582620}\">Nizatidine 15 MG/ML Oral Solution [Axid]</span></p><p><b>subject</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>authoredOn</b>: 2021-04-05</p><p><b>requester</b>: <span>Ronald Bone, MD</span></p><blockquote><p><b>dispenseRequest</b></p><p><b>numberOfRepeatsAllowed</b>: 1</p><p><b>quantity</b>: 480 mL</p></blockquote></div>"
+  ];
+  fhir:MedicationRequest.status [ fhir:value "active"];
+  fhir:MedicationRequest.intent [ fhir:value "order"];
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:Coding.code [ fhir:value "582620" ];
+       fhir:Coding.display [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Nizatidine 15 MG/ML Oral Solution [Axid]" ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:link <http://oontop.com/Patient/Patient-oontop-Min>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-oontop-Min" ]
+  ];
+  fhir:MedicationRequest.authoredOn [ fhir:value "2021-04-05"^^xsd:date];
+  fhir:MedicationRequest.requester [
+     fhir:Reference.display [ fhir:value "Ronald Bone, MD" ]
+  ];
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0;
+     fhir:Dosage.text [ fhir:value "10 mL bid" ];
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.boundsPeriod [
+           fhir:Period.start [ fhir:value "2008-04-05"^^xsd:date ]
+         ]
+       ]
+     ]
+  ];
+  fhir:MedicationRequest.dispenseRequest [
+     fhir:MedicationRequest.dispenseRequest.numberOfRepeatsAllowed [ fhir:value "1"^^xsd:nonNegativeInteger ];
+     fhir:MedicationRequest.dispenseRequest.quantity [
+       fhir:Quantity.value [ fhir:value "480"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "mL" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "mL" ]
+     ];
+     fhir:MedicationRequest.dispenseRequest.expectedSupplyDuration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "days" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "d" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://oontop.com/MedicationRequest/Oontop-Medication-Request-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

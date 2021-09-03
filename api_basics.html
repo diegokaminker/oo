@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>COM.OONTOP\API Basics - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/corear.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.oontop.com/fhir">
+            <img height="71" alt="Project home" src="assets/images/oontop.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!--    <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org.ar"><img height="70" alt="FHIR website" src="assets/images/logo-hl7-argentina.png"/> </a>
+        </div>
+      -->
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold"></span><br/>0.5.0 - ci-build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="api_basics.html">API</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Actors
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="actor_smartlink_demographic.html">SmartLink (Demographic)</a>
+      </li>
+      <li>
+        <a href="actor_smartlink_clinical.html">SmartLink (Clinical)</a>
+      </li>
+      <li>
+        <a href="actor_medpod.html">MedPod</a>
+      </li>
+      <li>
+        <a href="actor_rpm.html">RPM</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="operations.html">Operations</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+  <li>
+    <a href="identifiers.html">Identifiers</a>
+  </li>
+  <li>
+    <a href="safety.html">Safety</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>API Basics</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">OONTOP_IG - Local Development build (v0.5.0). See the <a href="http://oontop.com/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>API Basics</h2>
+  
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<h3 id="fhir-restful-api">FHIR RESTful API:</h3>
+
+<h4 id="rest-structure">REST Structure:</h4>
+
+<h4 id="base-structure">Base structure:</h4>
+
+<p>Each “resource type” (Resource represent data element / entity ) has the same set of interactions defined that can be used to manage the resources in a highly granular fashion</p>
+
+<p><strong><em>Instance Level Interaction</em></strong> supports read, vread, update, delete, patch, history; Type Level Interaction supports: create, search and history.</p>
+
+<p>Interactions are defined like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>VERB [base]/[type]/[id] {?_format=[mime-type]}
+</code></pre></div></div>
+
+<p><strong>VERB</strong> = the operation, e.g., get, update, delete</p>
+
+<p><strong>base</strong> = the service base url – <strong><span style="text-decoration:underline;">https://server{/path}</span></strong></p>
+
+<p><strong>mime type</strong></p>
+
+<p><strong>type</strong> = the resource type (e.g., Patient, CarePlan)<a href="https://server/Patient"> https://server/Patient</a></p>
+
+<p><strong>id</strong> = logical id of a resource</p>
+
+<p><strong>vid</strong> = version id</p>
+
+<p><strong>compartment</strong> = the name of compartment</p>
+
+<p><strong>parameters</strong> = url parameters as defined for the particular interaction</p>
+
+<hr />
+
+<h4 id="ssl--secure-connection">SSL / SECURE CONNECTION</h4>
+
+<p>All production systems shall use SSL.</p>
+
+<h4 id="timezone">TIMEZONE</h4>
+
+<p>Better to set the server to UTC and convert upon set / update / read.</p>
+
+<hr />
+
+<h4 id="conditional-read">Conditional Read:</h4>
+
+<p>**clients may use If-Modified-Since, or If-None-Match HTTP header on a read request. Servers can return 304 Not Modified **</p>
+
+<hr />
+
+<h4 id="content-type-encoding">Content Type Encoding:</h4>
+
+<p>The mime-type for FHIR resources is <code class="language-plaintext highlighter-rouge">application/fhir+json , UTF-8 </code>SHALL be used.</p>
+
+<hr />
+
+<h4 id="_pretty-">_pretty :</h4>
+
+<p>Clients that wish to request for pretty-printed resources (either in JSON or XML) can use the _pretty parameter:</p>
+
+<p>GET [base]/Patient/example?_pretty=true</p>
+
+<h4 id="read">Read</h4>
+
+<p>Get command:</p>
+
+<p>GET [base]/[type]/[id] {?_format=[mime-type]}</p>
+
+<p>This returns a single instance with the content specified for the resource type. This url may be accessed by a browser. The possible values for the <strong><a href="https://www.hl7.org/fhir/resource.html#id">Logical Id</a></strong> (“id”) itself are described in the <strong><a href="https://www.hl7.org/fhir/datatypes.html#id">id type</a></strong>. The returned resource SHALL have an **<code>id</code>&lt;/strong&gt; element with a value that is the <strong><code>[id]</code></strong>. Servers SHOULD return an <strong><code>ETag</code></strong> header with the versionId of the resource (if versioning is supported) and a <strong><code>Last-Modified</code></strong> header.</p>
+
+<p>In addition, the search parameter <code class="language-plaintext highlighter-rouge">_summary</code> can be used when reading a resource:</p>
+
+<p>GET [base]/[type]/[id] {?_summary=text}</p>
+
+<p>Head Request:</p>
+
+<p>Anywhere that a GET request can be used, a HEAD request is also allowed. HEAD requests are treated as specified in HTTP: same response as a GET, but with no body.</p>
+
+<hr />
+
+<h4 id="update">Update</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">update</code> interaction creates a new current version for an existing resource or creates an initial version if no resource already exists for the given id. The <code class="language-plaintext highlighter-rouge">update</code> interaction is performed by an HTTP <code class="language-plaintext highlighter-rouge">PUT</code> command as shown:</p>
+
+<p>PUT [base]/[type]/[id] {?_format=[mime-type]}</p>
+
+<p>Update as Create:</p>
+
+<p>Servers MAY choose to allow clients to <code class="language-plaintext highlighter-rouge">PUT</code> a resource to a location that does not yet exist on the server - effectively, allowing the client to define the id of the resource.</p>
+
+<h4 id="create">Create</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">create</code> interaction creates a new resource in a server-assigned location. If the client wishes to have control over the id of a newly submitted resource, it should use the <a href="https://www.hl7.org/fhir/http.html#update">update</a> interaction instead. The <code class="language-plaintext highlighter-rouge">create</code> interaction is performed by an HTTP <code class="language-plaintext highlighter-rouge">POST</code> command as shown:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  POST [base]/[type] {?_format=[mime-type]}
+</code></pre></div></div>
+
+<p>The request body SHALL be a FHIR Resource. The resource does not need to have an <code class="language-plaintext highlighter-rouge">id</code> element (this is one of the few cases where a resource exists without an <code class="language-plaintext highlighter-rouge">id</code> element). If an <code class="language-plaintext highlighter-rouge">id</code> is provided, the server SHALL ignore it. If the request body includes a <a href="https://www.hl7.org/fhir/resource.html#meta">meta</a>, the server SHALL ignore the existing <code class="language-plaintext highlighter-rouge">versionId</code> and <code class="language-plaintext highlighter-rouge">lastUpdated</code> values. The server SHALL populate the <code class="language-plaintext highlighter-rouge">id</code>, <code class="language-plaintext highlighter-rouge">meta.versionId</code> and <code class="language-plaintext highlighter-rouge">meta.lastUpdated</code> with the new correct values. Servers are allowed to review and alter the other metadata values, but SHOULD refrain from doing so (see <a href="https://www.hl7.org/fhir/resource.html#meta">metadata description</a> for further information).</p>
+
+<p>A server SHOULD otherwise accept the resource as submitted when it accepts the create, and return the same content when it is subsequently read. However some systems might not be able to do this; see the note on <a href="https://www.hl7.org/fhir/http.html#transactional-integrity">transactional integrity</a> for discussion.</p>
+
+<p>The server returns a <code class="language-plaintext highlighter-rouge">201</code> Created HTTP status code, and SHALL also return a <code class="language-plaintext highlighter-rouge">Location</code> header which contains the new <a href="https://www.hl7.org/fhir/resource.html#metadata">Logical Id</a> and <a href="https://www.hl7.org/fhir/resource.html#metadata">Version Id</a> of the created resource version:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Location: [base]/[type]/[id]/_history/[vid]
+</code></pre></div></div>
+
+<h4 id="search">Search</h4>
+
+<p>This interaction searches a set of resources based on some filter criteria. The interaction can be performed by several different HTTP commands.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  GET [base]/[type]{?[parameters]{&amp;_format=[mime-type]}}
+</code></pre></div></div>
+
+<p>This searches all resources of a particular type using the criteria represented in the parameters.</p>
+
+<p>Because of the way that some user agents and proxies treat <code class="language-plaintext highlighter-rouge">GET</code> and <code class="language-plaintext highlighter-rouge">POST</code> requests, in addition to the get based search method above, servers that support <em>search</em> SHALL also support a <code class="language-plaintext highlighter-rouge">POST</code> based search:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST  [base]/[type]/_search{?[parameters]{&amp;_format=[mime-type]}}
+Content-Type: application/x-www-form-urlencoded
+
+
+param1=value&amp;param2=value
+</code></pre></div></div>
+
+<p>This has exactly the same semantics as the equivalent <code class="language-plaintext highlighter-rouge">GET</code> command. Note that in the POST variant, parameters may appear in both the URL and the body. Parameters have the same meaning in either place. Since parameters can repeat, putting them in both places is the same as repeating them (which is valid for some parameters and not for others).</p>
+
+<p>Note: Supporting <code class="language-plaintext highlighter-rouge">GET</code> means that PHI (Personal health information) might appear in search parameters, and therefore in HTTP logs. For this reason logs should be regarded as being as sensitive as the resources themselves. This is a general requirement irrespective of the use of <code class="language-plaintext highlighter-rouge">GET</code> - see the <a href="https://www.hl7.org/fhir/security.html#audit">security page</a> for further commentary.</p>
+
+<p>All these search interactions take a series of parameters that are a series of <code class="language-plaintext highlighter-rouge">name=value</code> pairs encoded in the URL (or as an <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code> (<a href="https://url.spec.whatwg.org/#application/x-www-form-urlencoded">Specification </a>) submission for a <code class="language-plaintext highlighter-rouge">POST</code>). (See <a href="http://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type">W3C HTML forms </a>).</p>
+
+<p>Note: <code class="language-plaintext highlighter-rouge">application/x-www-form-urlencoded</code> is supported for <code class="language-plaintext highlighter-rouge">POST</code> so that invoking a search by <code class="language-plaintext highlighter-rouge">GET</code> or <code class="language-plaintext highlighter-rouge">POST</code> can be done from HTML forms in a browser (though considerable active content might be required in the browser), although this is not the main usage.</p>
+
+<h4 id="general-note">General Note:</h4>
+
+<p>Detailed specification is available at <a href="https://www.hl7.org/fhir/http.html">https://www.hl7.org/fhir/http.html</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ontop.com">Ontop Systems Inc</a>.  Package com.oontop#0.5.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jul 12, 2021 15:53-0300">2021-07-12</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+  <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a> |
+             
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

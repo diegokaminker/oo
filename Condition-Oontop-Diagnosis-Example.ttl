@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://oontop.com/Condition/Oontop-Diagnosis-Example> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Oontop-Diagnosis-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://oontop.com/fhir/ig/StructureDefinition/oontop-diagnosis";
+       fhir:index 0;
+       fhir:link <http://oontop.com/fhir/ig/StructureDefinition/oontop-diagnosis>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}\">Encounter Diagnosis</span></p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/sid/icd-10-cm C69.01}\">Malignant neoplasm of right conjunctiva</span></p><p><b>subject</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>onset</b>: May 11, 2021, 8:50:47 PM</p><p><b>recordedDate</b>: May 11, 2021, 8:50:47 PM</p></div>"
+  ];
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ]
+     ]
+  ];
+  fhir:Condition.verificationStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-ver-status" ];
+       fhir:Coding.code [ fhir:value "confirmed" ]
+     ]
+  ];
+  fhir:Condition.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-category" ];
+       fhir:Coding.code [ fhir:value "encounter-diagnosis" ];
+       fhir:Coding.display [ fhir:value "Encounter Diagnosis" ]
+     ]
+  ];
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/sid/icd-10-cm" ];
+       fhir:Coding.code [ fhir:value "C69.01" ];
+       fhir:Coding.display [ fhir:value "Malignant neoplasm of right conjunctiva" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Malignant neoplasm of right conjunctiva" ]
+  ];
+  fhir:Condition.subject [
+     fhir:link <http://oontop.com/Patient/Patient-oontop-Min>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-oontop-Min" ]
+  ];
+  fhir:Condition.onsetDateTime [ fhir:value "2021-05-11T20:50:47-03:00"^^xsd:dateTime];
+  fhir:Condition.recordedDate [ fhir:value "2021-05-11T20:50:47-03:00"^^xsd:dateTime] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://oontop.com/Condition/Oontop-Diagnosis-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

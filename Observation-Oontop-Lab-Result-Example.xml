@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Oontop-Lab-Result-Example"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes: {http://loinc.org 2339-0}">Glucose Bld-mCnc</span></p><p><b>subject</b>: <a href="Patient-Patient-oontop-Min.html">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>effective</b>: 2021-07-05</p><p><b>value</b>: 76 mg/dL</p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td><td><b>AppliesTo</b></td></tr><tr><td>*</td><td>40 mg/dL</td><td>109 mg/dL</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+      <display value="Laboratory"/>
+    </coding>
+    <text value="Laboratory"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="2339-0"/>
+      <display value="Glucose Bld-mCnc"/>
+    </coding>
+    <text value="Glucose Bld-mCnc"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient-oontop-Min"/>
+  </subject>
+  <effectiveDateTime value="2021-07-05"/>
+  <valueQuantity>
+    <value value="76"/>
+    <unit value="mg/dL"/>
+    <system value="http://unitsofmeasure.org"/>
+  </valueQuantity>
+  <referenceRange>
+    <low>
+      <value value="40"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </low>
+    <high>
+      <value value="109"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </high>
+    <appliesTo>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+        <code value="normal"/>
+        <display value="Normal Range"/>
+      </coding>
+      <text value="Normal Range"/>
+    </appliesTo>
+  </referenceRange>
+</Observation>

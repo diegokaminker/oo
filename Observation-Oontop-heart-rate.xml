@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="Oontop-heart-rate"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/observation-category vital-signs}">Vital Signs</span></p><p><b>code</b>: <span title="Codes: {http://loinc.org 8867-4}">heart_rate</span></p><p><b>subject</b>: <a href="Patient-Patient-oontop-Min.html">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>effective</b>: Jul 2, 2021, 7:30:00 AM</p><p><b>value</b>: 44 beats/min</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="vital-signs"/>
+      <display value="Vital Signs"/>
+    </coding>
+    <text value="Vital Signs"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="8867-4"/>
+      <display value="Heart Rate"/>
+    </coding>
+    <text value="heart_rate"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient-oontop-Min"/>
+  </subject>
+  <effectiveDateTime value="2021-07-02T10:30:00Z"/>
+  <valueQuantity>
+    <value value="44"/>
+    <unit value="beats/min"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="/min"/>
+  </valueQuantity>
+</Observation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="Oontop-Diagnosis-Example"/>
+  <meta>
+    <profile value="http://oontop.com/fhir/ig/StructureDefinition/oontop-diagnosis"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>clinicalStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/condition-category encounter-diagnosis}">Encounter Diagnosis</span></p><p><b>code</b>: <span title="Codes: {http://hl7.org/fhir/sid/icd-10-cm C69.01}">Malignant neoplasm of right conjunctiva</span></p><p><b>subject</b>: <a href="Patient-Patient-oontop-Min.html">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>onset</b>: May 11, 2021, 8:50:47 PM</p><p><b>recordedDate</b>: May 11, 2021, 8:50:47 PM</p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="encounter-diagnosis"/>
+      <display value="Encounter Diagnosis"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <code value="C69.01"/>
+      <display value="Malignant neoplasm of right conjunctiva"/>
+    </coding>
+    <text value="Malignant neoplasm of right conjunctiva"/>
+  </code>
+  <subject>
+    <reference value="Patient/Patient-oontop-Min"/>
+  </subject>
+  <onsetDateTime value="2021-05-11T20:50:47-03:00"/>
+  <recordedDate value="2021-05-11T20:50:47-03:00"/>
+</Condition>

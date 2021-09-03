@@ -1,0 +1,53 @@
+{
+  "resourceType": "Patient",
+  "id": "Patient-oontop-Min",
+  "meta": {
+    "profile": [
+      "http://oontop.com/fhir/ig/StructureDefinition/patient-oontop"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>identifier</b>: Medical Record Number: 1032702 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: Amy V. Shaw </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1987-02-20</p><p><b>address</b>: 49 Meadow St Mounds OK 74047 US </p></div>"
+  },
+  "identifier": [
+    {
+      "use": "usual",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical Record Number"
+          }
+        ],
+        "text": "Medical Record Number"
+      },
+      "system": "http://www.smartlink.com/patid",
+      "value": "1032702"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "family": "Shaw",
+      "given": [
+        "Amy",
+        "V."
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1987-02-20",
+  "address": [
+    {
+      "line": [
+        "49 Meadow St"
+      ],
+      "city": "Mounds",
+      "state": "OK",
+      "postalCode": "74047",
+      "country": "US"
+    }
+  ]
+}

@@ -6,12 +6,14 @@
   "profiles": {
     "Condition": [
       {
-        "url": "http://oontop.com/fhir/ig/StructureDefinition/oontop-call-reason",
-        "title": "Oontop Pain Score"
-      },
-      {
         "url": "http://oontop.com/fhir/ig/StructureDefinition/oontop-diagnosis",
         "title": "Oontop Diagnosis"
+      }
+    ],
+    "Consent": [
+      {
+        "url": "http://oontop.com/fhir/ig/StructureDefinition/oontop-consent",
+        "title": "Oontop Consent"
       }
     ],
     "Observation": [
@@ -55,6 +57,9 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
       "StructureDefinition.snapshot.element.type"
     ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
+      "StructureDefinition"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
     ],
@@ -66,6 +71,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
       "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
       "StructureDefinition.snapshot.element"

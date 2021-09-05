@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Location xmlns="http://hl7.org/fhir">
+  <id value="Oontop-Location-Example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>identifier</b>: id: B1-S.F2</p><p><b>status</b>: active</p><p><b>name</b>: South Wing, second floor</p><p><b>alias</b>: BU MC, SW, F2, Burgers University Medical Center, South Wing, second floor</p><p><b>description</b>: Second floor of the Old South Wing, formerly in use by Psychiatry</p><p><b>mode</b>: instance</p><p><b>telecom</b>: ph: 2328</p><p><b>address</b>: 1003 Healthcare Drive Amherst MA USA (WORK)</p><p><b>physicalType</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type wi}">Wing</span></p></div>
+  </text>
+  <identifier>
+    <value value="B1-S.F2"/>
+  </identifier>
+  <status value="active"/>
+  <name value="South Wing, second floor"/>
+  <alias value="BU MC, SW, F2"/>
+  <alias value="Burgers University Medical Center, South Wing, second floor"/>
+  <description value="Second floor of the Old South Wing, formerly in use by Psychiatry"/>
+  <mode value="instance"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="2328"/>
+  </telecom>
+  <address>
+    <use value="work"/>
+    <line value="1003 Healthcare Drive"/>
+    <city value="Amherst"/>
+    <state value="MA"/>
+    <country value="USA"/>
+  </address>
+  <physicalType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+      <code value="wi"/>
+      <display value="Wing"/>
+    </coding>
+  </physicalType>
+</Location>

@@ -1,15 +1,18 @@
 ﻿OONTOP_IG : Validation Results
 =========================================
 
-err = 0, warn = 0, info = 0
-IG Publisher Version: 1.1.76
-Generated Mon Jul 12 15:53:46 ART 2021. FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = http://oontop.com)
+err = 1, warn = 3, info = 2
+IG Publisher Version: 1.1.79
+Generated Sun Sep 05 11:41:19 ART 2021. FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = http://oontop.com)
 
  Build Errors : 0 / 0 / 0
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/allergyintolerance-Oontop-Allergy-Intolerance-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/appointment-Oontop-Appointment-Example : 0 / 3 / 1
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/careplan-Oontop-Treatment-Plan-Example : 0 / 0 / 2
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/condition-Oontop-CallReason-Example : 0 / 0 / 2
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/condition-Oontop-Diagnosis-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/consent-Privacy-Consent-Example : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/location-Oontop-Location-Example : 0 / 0 / 1
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/medicationrequest-Oontop-Medication-Request-Example : 0 / 0 / 2
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-Lab-Result-Example : 0 / 0 / 2
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-Pain-Score-Example : 0 / 0 / 2
@@ -19,7 +22,9 @@ Generated Mon Jul 12 15:53:46 ART 2021. FHIR version 4.0.1 for com.oontop#0.5.0 
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-temperature : 0 / 0 / 2
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/observation-Oontop-vitals-panel : 0 / 0 / 2
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/patient-Patient-oontop-Min : 0 / 0 / 2
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/practitioner-Oontop-Practitioner-Example : 0 / 0 / 4
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-call-reason : 0 / 0 / 1
+ /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-consent : 1 / 0 / 1
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-diagnosis : 0 / 0 / 1
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-pain-score : 0 / 0 / 1
  /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-treatment-plan : 0 / 0 / 1
@@ -28,23 +33,34 @@ Generated Mon Jul 12 15:53:46 ART 2021. FHIR version 4.0.1 for com.oontop#0.5.0 
  /Users/diego/Dropbox/OONTOP/OOntopIG/input/ImplementationGuide-com.oontop : 0 / 0 / 1
 </table>
 == n/a ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/AllergyIntolerance-Oontop-Allergy-Intolerance-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/CarePlan-Oontop-Treatment-Plan-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Condition-Oontop-CallReason-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Condition-Oontop-Diagnosis-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/MedicationRequest-Oontop-Medication-Request-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-Lab-Result-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-Pain-Score-Example.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-blood-pressure.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-heart-rate.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-respiratory-rate.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-temperature.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-vitals-panel.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Patient-Patient-oontop-Min.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-call-reason.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-diagnosis.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-pain-score.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-treatment-plan.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-vital-signs-panel.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-patient-oontop.json ==
-== /Users/diego/Dropbox/OONTOP/OOntopIG/input/ImplementationGuide-com.oontop.json ==
+== fsh-generated/resources/AllergyIntolerance-Oontop-Allergy-Intolerance-Example.json ==
+== fsh-generated/resources/Appointment-Oontop-Appointment-Example.json ==
+WARNING: Appointment/Oontop-Appointment-Example: Appointment.serviceCategory[0].coding[0]: The display "General practice" is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'
+WARNING: Appointment/Oontop-Appointment-Example: Appointment.serviceType[0].coding[0]: The display "General practice" is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'
+WARNING: Appointment/Oontop-Appointment-Example: Appointment.specialty[0]: The display "General practice" is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4)
+== fsh-generated/resources/CarePlan-Oontop-Treatment-Plan-Example.json ==
+== fsh-generated/resources/Condition-Oontop-CallReason-Example.json ==
+== fsh-generated/resources/Condition-Oontop-Diagnosis-Example.json ==
+== fsh-generated/resources/Consent-Privacy-Consent-Example.json ==
+== fsh-generated/resources/Location-Oontop-Location-Example.json ==
+== fsh-generated/resources/MedicationRequest-Oontop-Medication-Request-Example.json ==
+== fsh-generated/resources/Observation-Oontop-Lab-Result-Example.json ==
+== fsh-generated/resources/Observation-Oontop-Pain-Score-Example.json ==
+== fsh-generated/resources/Observation-Oontop-blood-pressure.json ==
+== fsh-generated/resources/Observation-Oontop-heart-rate.json ==
+== fsh-generated/resources/Observation-Oontop-respiratory-rate.json ==
+== fsh-generated/resources/Observation-Oontop-temperature.json ==
+== fsh-generated/resources/Observation-Oontop-vitals-panel.json ==
+== fsh-generated/resources/Patient-Patient-oontop-Min.json ==
+== fsh-generated/resources/Practitioner-Oontop-Practitioner-Example.json ==
+INFORMATION: Practitioner/Oontop-Practitioner-Example: Practitioner.identifier[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+INFORMATION: Practitioner/Oontop-Practitioner-Example: Practitioner.identifier[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+== fsh-generated/resources/StructureDefinition-oontop-call-reason.json ==
+== fsh-generated/resources/StructureDefinition-oontop-consent.json ==
+ERROR: StructureDefinition/oontop-consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
+== fsh-generated/resources/StructureDefinition-oontop-diagnosis.json ==
+== fsh-generated/resources/StructureDefinition-oontop-pain-score.json ==
+== fsh-generated/resources/StructureDefinition-oontop-treatment-plan.json ==
+== fsh-generated/resources/StructureDefinition-oontop-vital-signs-panel.json ==
+== fsh-generated/resources/StructureDefinition-patient-oontop.json ==
+== input/ImplementationGuide-com.oontop.json ==

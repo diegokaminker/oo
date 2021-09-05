@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Appointment xmlns="http://hl7.org/fhir">
+  <id value="Oontop-Appointment-Example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: booked</p><p><b>serviceCategory</b>: <span title="Codes: {http://snomed.info/sct 394814009}">General practice</span></p><p><b>serviceType</b>: <span title="Codes: {http://snomed.info/sct 394814009}">General practice</span></p><p><b>specialty</b>: <span title="Codes: {http://snomed.info/sct 394814009}">General practice</span></p><p><b>appointmentType</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0276 FOLLOWUP}">A follow up visit from a previous appointment</span></p><p><b>description</b>: Discussion on the results of your recent MRI</p><p><b>start</b>: Dec 10, 2021, 6:00:00 AM</p><p><b>end</b>: Dec 10, 2021, 8:00:00 AM</p><p><b>created</b>: 2021-10-10</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="Patient-Patient-oontop-Min.html">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}">attender</span></p><p><b>actor</b>: <a href="Practitioner-Oontop-Practitioner-Example.html">Generated Summary: id: 9941339108, id: 25456; Ronald Bone </a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href="Location-Oontop-Location-Example.html">Generated Summary: id: B1-S.F2; status: active; name: South Wing, second floor; alias: BU MC, SW, F2, alias: Burgers University Medical Center, South Wing, second floor; description: Second floor of the Old South Wing, formerly in use by Psychiatry; mode: instance; Phone: 2328; <span title="Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type wi}">Wing</span></a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote></div>
+  </text>
+  <status value="booked"/>
+  <serviceCategory>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394814009"/>
+      <display value="General practice"/>
+    </coding>
+  </serviceCategory>
+  <serviceType>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394814009"/>
+      <display value="General practice"/>
+    </coding>
+  </serviceType>
+  <specialty>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="394814009"/>
+      <display value="General practice"/>
+    </coding>
+  </specialty>
+  <appointmentType>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0276"/>
+      <code value="FOLLOWUP"/>
+      <display value="A follow up visit from a previous appointment"/>
+    </coding>
+  </appointmentType>
+  <description value="Discussion on the results of your recent MRI"/>
+  <start value="2021-12-10T09:00:00Z"/>
+  <end value="2021-12-10T11:00:00Z"/>
+  <created value="2021-10-10"/>
+  <participant>
+    <actor>
+      <reference value="Patient/Patient-oontop-Min"/>
+    </actor>
+    <required value="required"/>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+        <code value="ATND"/>
+      </coding>
+    </type>
+    <actor>
+      <reference value="Practitioner/Oontop-Practitioner-Example"/>
+    </actor>
+    <required value="required"/>
+    <status value="accepted"/>
+  </participant>
+  <participant>
+    <actor>
+      <reference value="Location/Oontop-Location-Example"/>
+    </actor>
+    <required value="required"/>
+    <status value="accepted"/>
+  </participant>
+</Appointment>

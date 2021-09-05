@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.version [ fhir:value "0.5.0"];
   fhir:ImplementationGuide.name [ fhir:value "OONTOP_IG"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-07-12T15:53:25-03:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-09-05T11:40:53-03:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Ontop Systems Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -367,6 +367,20 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://oontop.com/StructureDefinition/oontop-consent>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/oontop-consent" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "oontop Consent" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Consent" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "Patient" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -377,7 +391,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Patient Minimal Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -391,7 +405,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Pain Score Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -405,7 +419,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Call Reason Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -419,7 +433,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Diagnosis Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -433,7 +447,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Vitals - Respiratory Rate Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -447,7 +461,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Vitals - Heart Rate Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -461,7 +475,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Vitals - Blood Pressure Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -475,7 +489,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Vitals - Temperature Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -489,7 +503,63 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Vitals - Panel Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Consent" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://oontop.com/Consent/Privacy-Consent-Example>;
+         fhir:Reference.reference [ fhir:value "Consent/Privacy-Consent-Example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "oontop Privacy Consent Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Privacy Consent Example" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Appointment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://oontop.com/Appointment/Oontop-Appointment-Example>;
+         fhir:Reference.reference [ fhir:value "Appointment/Oontop-Appointment-Example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "oontop Appointment Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Appointment Example" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Practitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://oontop.com/Practitioner/Oontop-Practitioner-Example>;
+         fhir:Reference.reference [ fhir:value "Practitioner/Oontop-Practitioner-Example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "oontop Practitioner Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Practitioner Example" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://oontop.com/Location/Oontop-Location-Example>;
+         fhir:Reference.reference [ fhir:value "Location/Oontop-Location-Example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "oontop Location Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Location Example" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -503,7 +573,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Treatment Plan Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -517,7 +587,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Allergy Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -531,7 +601,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "oontop Medication Example" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 18;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

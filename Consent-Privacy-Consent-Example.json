@@ -1,0 +1,68 @@
+{
+  "resourceType": "Consent",
+  "id": "Privacy-Consent-Example",
+  "meta": {
+    "profile": [
+      "http://oontop.com/fhir/ig/StructureDefinition/oontop-consent"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://loinc.org 59284-0}\">Consent Document</span></p><p><b>patient</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>dateTime</b>: May 26, 2021, 1:41:10 AM</p><p><b>performer</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>organization</b>: <span></span></p><p><b>source</b>: </p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode OPTIN}\">opt-in</span></p><h3>Provisions</h3><table class=\"grid\"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2021-02-10 --&gt; 2021-08-10</td></tr></table></div>"
+  },
+  "status": "active",
+  "scope": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+        "code": "patient-privacy"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://loinc.org",
+          "code": "59284-0"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/Patient-oontop-Min"
+  },
+  "dateTime": "2021-05-26T00:41:10-04:00",
+  "performer": [
+    {
+      "reference": "Patient/Patient-oontop-Min"
+    }
+  ],
+  "organization": [
+    {
+      "identifier": {
+        "system": "http://oontop.com/partners",
+        "value": "40444"
+      }
+    }
+  ],
+  "sourceAttachment": {
+    "contentType": "application/pdf",
+    "data": "JVBERi0xLjAKMSAwIG9iajw8L1BhZ2VzIDIgMCBSPj5lbmRvYmogMiAwIG9iajw8L0tpZHNbMyAw\nIFJdL0NvdW50IDE+PmVuZG9iaiAzIDAgb2JqPDwvTWVkaWFCb3hbMCAwIDMgM10+PmVuZG9iagp0\ncmFpbGVyPDwvUm9vdCAxIDAgUj4+Cg==",
+    "title": "Consent"
+  },
+  "policyRule": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "OPTIN"
+      }
+    ]
+  },
+  "provision": {
+    "period": {
+      "start": "2021-02-10",
+      "end": "2021-08-10"
+    }
+  }
+}

@@ -10,7 +10,7 @@
   "version": "0.5.0",
   "name": "OONTOP_IG",
   "status": "draft",
-  "date": "2021-07-12T15:53:25-03:00",
+  "date": "2021-09-05T11:40:53-03:00",
   "publisher": "Ontop Systems Inc",
   "contact": [
     {
@@ -379,6 +379,20 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/oontop-consent"
+        },
+        "name": "oontop Consent",
+        "description": "oontop Consent",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Patient"
           }
         ],
@@ -499,6 +513,62 @@
         },
         "name": "oontop Vitals - Panel",
         "description": "oontop Vitals - Panel Example",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Consent"
+          }
+        ],
+        "reference": {
+          "reference": "Consent/Privacy-Consent-Example"
+        },
+        "name": "oontop Privacy Consent Example",
+        "description": "oontop Privacy Consent Example",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Appointment"
+          }
+        ],
+        "reference": {
+          "reference": "Appointment/Oontop-Appointment-Example"
+        },
+        "name": "oontop Appointment Example",
+        "description": "oontop Appointment Example",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/Oontop-Practitioner-Example"
+        },
+        "name": "oontop Practitioner Example",
+        "description": "oontop Practitioner Example",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Location"
+          }
+        ],
+        "reference": {
+          "reference": "Location/Oontop-Location-Example"
+        },
+        "name": "oontop Location Example",
+        "description": "oontop Location Example",
         "exampleBoolean": true
       },
       {

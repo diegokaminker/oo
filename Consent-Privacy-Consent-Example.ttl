@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://oontop.com/Consent/Privacy-Consent-Example> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Privacy-Consent-Example"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://oontop.com/fhir/ig/StructureDefinition/oontop-consent";
+       fhir:index 0;
+       fhir:link <http://oontop.com/fhir/ig/StructureDefinition/oontop-consent>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://loinc.org 59284-0}\">Consent Document</span></p><p><b>patient</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>dateTime</b>: May 26, 2021, 1:41:10 AM</p><p><b>performer</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>organization</b>: <span></span></p><p><b>source</b>: </p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode OPTIN}\">opt-in</span></p><h3>Provisions</h3><table class=\"grid\"><tr><td>-</td><td><b>Period</b></td></tr><tr><td>*</td><td>2021-02-10 --&gt; 2021-08-10</td></tr></table></div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ];
+       fhir:Coding.code [ fhir:value "patient-privacy" ]
+     ]
+  ];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:59284-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "59284-0" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:link <http://oontop.com/Patient/Patient-oontop-Min>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-oontop-Min" ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2021-05-26T00:41:10-04:00"^^xsd:dateTime];
+  fhir:Consent.performer [
+     fhir:index 0;
+     fhir:link <http://oontop.com/Patient/Patient-oontop-Min>;
+     fhir:Reference.reference [ fhir:value "Patient/Patient-oontop-Min" ]
+  ];
+  fhir:Consent.organization [
+     fhir:index 0;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://oontop.com/partners" ];
+       fhir:Identifier.value [ fhir:value "40444" ]
+     ]
+  ];
+  fhir:Consent.sourceAttachment [
+     fhir:Attachment.contentType [ fhir:value "application/pdf" ];
+     fhir:Attachment.data [ fhir:value "JVBERi0xLjAKMSAwIG9iajw8L1BhZ2VzIDIgMCBSPj5lbmRvYmogMiAwIG9iajw8L0tpZHNbMyAw\nIFJdL0NvdW50IDE+PmVuZG9iaiAzIDAgb2JqPDwvTWVkaWFCb3hbMCAwIDMgM10+PmVuZG9iagp0\ncmFpbGVyPDwvUm9vdCAxIDAgUj4+Cg=="^^xsd:base64Binary ];
+     fhir:Attachment.title [ fhir:value "Consent" ]
+  ];
+  fhir:Consent.policyRule [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "OPTIN" ]
+     ]
+  ];
+  fhir:Consent.provision [
+     fhir:Consent.provision.period [
+       fhir:Period.start [ fhir:value "2021-02-10"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2021-08-10"^^xsd:date ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://oontop.com/Consent/Privacy-Consent-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

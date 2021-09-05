@@ -10,7 +10,7 @@
   <version value="0.5.0"/>
   <name value="OONTOP_IG"/>
   <status value="draft"/>
-  <date value="2021-07-12T15:53:25-03:00"/>
+  <date value="2021-09-05T11:40:53-03:00"/>
   <publisher value="Ontop Systems Inc"/>
   <contact>
     <name value="Ontop Systems Inc"/>
@@ -252,6 +252,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/oontop-consent"/>
+      </reference>
+      <name value="oontop Consent"/>
+      <description value="oontop Consent"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
@@ -347,6 +358,50 @@
       </reference>
       <name value="oontop Vitals - Panel"/>
       <description value="oontop Vitals - Panel Example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Consent"/>
+      </extension>
+      <reference>
+        <reference value="Consent/Privacy-Consent-Example"/>
+      </reference>
+      <name value="oontop Privacy Consent Example"/>
+      <description value="oontop Privacy Consent Example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/Oontop-Appointment-Example"/>
+      </reference>
+      <name value="oontop Appointment Example"/>
+      <description value="oontop Appointment Example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/Oontop-Practitioner-Example"/>
+      </reference>
+      <name value="oontop Practitioner Example"/>
+      <description value="oontop Practitioner Example"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/Oontop-Location-Example"/>
+      </reference>
+      <name value="oontop Location Example"/>
+      <description value="oontop Location Example"/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>

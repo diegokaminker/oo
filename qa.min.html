@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 0, warn = 0, info = 0 -->
+<!-- broken links = 0, errors = 1, warn = 3, info = 2 -->
 <head>
   <title>OONTOP_IG : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
   </style>
   <script>
     function flip(id) {
@@ -19,13 +21,24 @@
         span.innerHTML = 'Show Reasoning';
       }
     }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
   </script>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for OONTOP_IG</h1>
- <p>Generated Mon Jul 12 15:53:46 ART 2021, FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = <a href="http://oontop.com">http://oontop.com</a> (<a href="http://oontop.com/history.html">history</a>)). See <a href="/users/diego/dropbox/oontop/oontopig/output/qa.html">Full QA Report</a></p>
+ <p>Generated Sun Sep 05 11:41:19 ART 2021, FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = <a href="http://oontop.com">http://oontop.com</a> (<a href="http://oontop.com/history.html">history</a>)). See <a href="/users/diego/dropbox/oontop/oontopig/output/qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.76</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.79</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = com.oontop, Canonical = http://oontop.com</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Version Check:</td><td>0.5.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
@@ -38,8 +51,8 @@
  <tr><td>Publication Rules:</td><td>Code = n/a. n/a - not an HL7.org or FHIR.org implementation guide
  <br/><br/>The copyrightYear parameter ('2021+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://oontop.com (Problem #1 with package-list.json at http://oontop.com: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $)</td></tr>
- <tr><td>Summary:</td><td> broken links = 0, errors = 0, warn = 0, info = 0</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://oontop.com (Problem #1 with package-list.json at http://oontop.com: class com.google.gson.JsonNull cannot be cast to class com.google.gson.JsonObject (com.google.gson.JsonNull and com.google.gson.JsonObject are in unnamed module of loader 'app'))</td></tr>
+ <tr><td>Summary:</td><td> broken links = 0, errors = 1, warn = 3, info = 2</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -48,15 +61,73 @@
    <tr style="background-color: #EFFFEF">
      <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_appointment-Oontop-Appointment-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/appointment-Oontop-Appointment-Example</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-consent"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-consent</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
 </table>
 <hr/>
 <a name="internal"> </a>
-<h2><a href="">n/a</a></h2>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
+</table>
+<hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_appointment-Oontop-Appointment-Example"> </a>
+<h2><a href="Appointment-Oontop-Appointment-Example.html">fsh-generated/resources/Appointment-Oontop-Appointment-Example.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Appointment: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Appointment.serviceCategory[0].coding[0] (l8/c10)</b></td><td><b>warning</b></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b> (<a href="qa-tx.html#l1">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Appointment.serviceType[0].coding[0] (l19/c10)</b></td><td><b>warning</b></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b> (<a href="qa-tx.html#l1">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Appointment.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4)</b> (<a href="qa-tx.html#l3">see Tx log</a>)</td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-consent"> </a>
+<h2><a href="StructureDefinition-oontop-consent.html">fsh-generated/resources/StructureDefinition-oontop-consent.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_IDENTIFIER_IETF_SYSTEM_VALUE"><b>if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)</b></td>
+   </tr>
 </table>
 <a name="suppressed"> </a>
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p>No suppressed messsages</p><a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="TYPE_SPECIFIC_CHECKS_DT_IDENTIFIER_IETF_SYSTEM_VALUE"> </a>
+<h2>TYPE_SPECIFIC_CHECKS_DT_IDENTIFIER_IETF_SYSTEM_VALUE</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-oontop-consent.html">fsh-generated/resources/StructureDefinition-oontop-consent.json</a></td><td><b>if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_PassThrough_TX_Message"> </a>
+<h2>Terminology_PassThrough_TX_Message</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Appointment-Oontop-Appointment-Example.html">fsh-generated/resources/Appointment-Oontop-Appointment-Example.json</a></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Appointment-Oontop-Appointment-Example.html">fsh-generated/resources/Appointment-Oontop-Appointment-Example.json</a></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b></td>
+   </tr>
+</table>
 </body>
 </html>

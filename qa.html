@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 0, errors = 0, warn = 0, info = 0 -->
+<!-- broken links = 0, errors = 1, warn = 3, info = 2 -->
 <head>
   <title>OONTOP_IG : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
   </style>
   <script>
     function flip(id) {
@@ -19,13 +21,24 @@
         span.innerHTML = 'Show Reasoning';
       }
     }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
   </script>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for OONTOP_IG</h1>
- <p>Generated Mon Jul 12 15:53:46 ART 2021, FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = <a href="http://oontop.com">http://oontop.com</a> (<a href="http://oontop.com/history.html">history</a>)). See <a href="/users/diego/dropbox/oontop/oontopig/output/qa.min.html">Errors Only</a></p>
+ <p>Generated Sun Sep 05 11:41:19 ART 2021, FHIR version 4.0.1 for com.oontop#0.5.0 (canonical = <a href="http://oontop.com">http://oontop.com</a> (<a href="http://oontop.com/history.html">history</a>)). See <a href="/users/diego/dropbox/oontop/oontopig/output/qa.min.html">Errors Only</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.76</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.79</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = com.oontop, Canonical = http://oontop.com</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Version Check:</td><td>0.5.0: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
@@ -38,8 +51,8 @@
  <tr><td>Publication Rules:</td><td>Code = n/a. n/a - not an HL7.org or FHIR.org implementation guide
  <br/><br/>The copyrightYear parameter ('2021+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://oontop.com (Problem #1 with package-list.json at http://oontop.com: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $)</td></tr>
- <tr><td>Summary:</td><td> broken links = 0, errors = 0, warn = 0, info = 0</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://oontop.com (Problem #1 with package-list.json at http://oontop.com: class com.google.gson.JsonNull cannot be cast to class com.google.gson.JsonObject (com.google.gson.JsonNull and com.google.gson.JsonObject are in unnamed module of loader 'app'))</td></tr>
+ <tr><td>Summary:</td><td> broken links = 0, errors = 1, warn = 3, info = 2</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -52,6 +65,9 @@
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_allergyintolerance-Oontop-Allergy-Intolerance-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/allergyintolerance-Oontop-Allergy-Intolerance-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_appointment-Oontop-Appointment-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/appointment-Oontop-Appointment-Example</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_careplan-Oontop-Treatment-Plan-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/careplan-Oontop-Treatment-Plan-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
@@ -59,6 +75,12 @@
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_condition-Oontop-Diagnosis-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/condition-Oontop-Diagnosis-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_consent-Privacy-Consent-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/consent-Privacy-Consent-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_location-Oontop-Location-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/location-Oontop-Location-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_medicationrequest-Oontop-Medication-Request-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/medicationrequest-Oontop-Medication-Request-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -88,7 +110,13 @@
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_patient-Patient-oontop-Min"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/patient-Patient-oontop-Min</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_practitioner-Oontop-Practitioner-Example"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/practitioner-Oontop-Practitioner-Example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-call-reason"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-call-reason</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-consent"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-consent</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #EFFFEF">
      <td><a href="#_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-diagnosis"><b>/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/structuredefinition-oontop-diagnosis</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
@@ -111,24 +139,44 @@
 </table>
 <hr/>
 <a name="internal"> </a>
-<h2><a href="">n/a</a></h2>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_allergyintolerance-Oontop-Allergy-Intolerance-Example"> </a>
-<h2><a href="AllergyIntolerance-Oontop-Allergy-Intolerance-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/AllergyIntolerance-Oontop-Allergy-Intolerance-Example.json</a></h2>
- <ul style="font-size: 7px"><li>AllergyIntolerance: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/allergyintolerance.html">AllergyIntolerance</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a> (per meta)</li></ul>
-
+<h2><a href="AllergyIntolerance-Oontop-Allergy-Intolerance-Example.html">fsh-generated/resources/AllergyIntolerance-Oontop-Allergy-Intolerance-Example.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>AllergyIntolerance: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/allergyintolerance.html">AllergyIntolerance</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
    </tr>
 </table>
 <hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_appointment-Oontop-Appointment-Example"> </a>
+<h2><a href="Appointment-Oontop-Appointment-Example.html">fsh-generated/resources/Appointment-Oontop-Appointment-Example.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Appointment: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Appointment.serviceCategory[0].coding[0] (l8/c10)</b></td><td><b>warning</b></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b> (<a href="qa-tx.html#l1">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Appointment.serviceType[0].coding[0] (l19/c10)</b></td><td><b>warning</b></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b> (<a href="qa-tx.html#l1">see Tx log</a>)</td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Appointment.specialty[0] (l28/c6)</b></td><td><b>warning</b></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4)</b> (<a href="qa-tx.html#l3">see Tx log</a>)</td>
+   </tr>
+</table>
+<hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_careplan-Oontop-Treatment-Plan-Example"> </a>
-<h2><a href="CarePlan-Oontop-Treatment-Plan-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/CarePlan-Oontop-Treatment-Plan-Example.json</a></h2>
- <ul style="font-size: 7px"><li>CarePlan: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a> and <i>this.</i><a href="StructureDefinition-oontop-treatment-plan.html">Oontop Treatment Plan</a> (per meta)</li></ul>
-
+<h2><a href="CarePlan-Oontop-Treatment-Plan-Example.html">fsh-generated/resources/CarePlan-Oontop-Treatment-Plan-Example.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CarePlan: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/careplan.html">CarePlan</a> and <i>this.</i><a href="StructureDefinition-oontop-treatment-plan.html">Oontop Treatment Plan</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -136,9 +184,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_condition-Oontop-CallReason-Example"> </a>
-<h2><a href="Condition-Oontop-CallReason-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Condition-Oontop-CallReason-Example.json</a></h2>
- <ul style="font-size: 7px"><li>Condition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-oontop-call-reason.html">Oontop Pain Score</a> (per meta)</li></ul>
-
+<h2><a href="Condition-Oontop-CallReason-Example.html">fsh-generated/resources/Condition-Oontop-CallReason-Example.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Condition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-oontop-call-reason.html">Oontop Pain Score</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -146,9 +194,29 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_condition-Oontop-Diagnosis-Example"> </a>
-<h2><a href="Condition-Oontop-Diagnosis-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Condition-Oontop-Diagnosis-Example.json</a></h2>
- <ul style="font-size: 7px"><li>Condition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-oontop-diagnosis.html">Oontop Diagnosis</a> (per meta)</li></ul>
-
+<h2><a href="Condition-Oontop-Diagnosis-Example.html">fsh-generated/resources/Condition-Oontop-Diagnosis-Example.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Condition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/condition.html">Condition</a> and <i>this.</i><a href="StructureDefinition-oontop-diagnosis.html">Oontop Diagnosis</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_consent-Privacy-Consent-Example"> </a>
+<h2><a href="Consent-Privacy-Consent-Example.html">fsh-generated/resources/Consent-Privacy-Consent-Example.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>Consent: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/consent.html">Consent</a> and <i>this.</i><a href="StructureDefinition-oontop-consent.html">Oontop Consent</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_location-Oontop-Location-Example"> </a>
+<h2><a href="Location-Oontop-Location-Example.html">fsh-generated/resources/Location-Oontop-Location-Example.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>Location: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/location.html">Location</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -156,9 +224,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_medicationrequest-Oontop-Medication-Request-Example"> </a>
-<h2><a href="MedicationRequest-Oontop-Medication-Request-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/MedicationRequest-Oontop-Medication-Request-Example.json</a></h2>
- <ul style="font-size: 7px"><li>MedicationRequest: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a> (per meta)</li></ul>
-
+<h2><a href="MedicationRequest-Oontop-Medication-Request-Example.html">fsh-generated/resources/MedicationRequest-Oontop-Medication-Request-Example.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>MedicationRequest: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/medicationrequest.html">MedicationRequest</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-medicationrequest.html">US Core MedicationRequest Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -166,9 +234,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-Lab-Result-Example"> </a>
-<h2><a href="Observation-Oontop-Lab-Result-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-Lab-Result-Example.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-Lab-Result-Example.html">fsh-generated/resources/Observation-Oontop-Lab-Result-Example.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-observation-lab.html">US Core Laboratory Result Observation Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -176,9 +244,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-Pain-Score-Example"> </a>
-<h2><a href="Observation-Oontop-Pain-Score-Example.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-Pain-Score-Example.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-oontop-pain-score.html">oontop Pain Score</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-Pain-Score-Example.html">fsh-generated/resources/Observation-Oontop-Pain-Score-Example.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-oontop-pain-score.html">oontop Pain Score</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -186,9 +254,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-blood-pressure"> </a>
-<h2><a href="Observation-Oontop-blood-pressure.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-blood-pressure.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-blood-pressure.html">fsh-generated/resources/Observation-Oontop-blood-pressure.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-blood-pressure.html">US Core Blood Pressure Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -196,9 +264,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-heart-rate"> </a>
-<h2><a href="Observation-Oontop-heart-rate.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-heart-rate.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-heart-rate.html">fsh-generated/resources/Observation-Oontop-heart-rate.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-heart-rate.html">US Core Heart Rate Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -206,9 +274,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-respiratory-rate"> </a>
-<h2><a href="Observation-Oontop-respiratory-rate.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-respiratory-rate.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-respiratory-rate.html">fsh-generated/resources/Observation-Oontop-respiratory-rate.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-respiratory-rate.html">US Core Respiratory Rate Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -216,9 +284,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-temperature"> </a>
-<h2><a href="Observation-Oontop-temperature.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-temperature.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-temperature.html">fsh-generated/resources/Observation-Oontop-temperature.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-body-temperature.html">US Core Body Temperature Profile</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -226,9 +294,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_observation-Oontop-vitals-panel"> </a>
-<h2><a href="Observation-Oontop-vitals-panel.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Observation-Oontop-vitals-panel.json</a></h2>
- <ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-oontop-vital-signs-panel.html">oontop Vital Signs Panel</a> (per meta)</li></ul>
-
+<h2><a href="Observation-Oontop-vitals-panel.html">fsh-generated/resources/Observation-Oontop-vitals-panel.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>Observation: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/observation.html">Observation</a> and <i>this.</i><a href="StructureDefinition-oontop-vital-signs-panel.html">oontop Vital Signs Panel</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -236,29 +304,58 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_patient-Patient-oontop-Min"> </a>
-<h2><a href="Patient-Patient-oontop-Min.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/Patient-Patient-oontop-Min.json</a></h2>
- <ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a> and <i>this.</i><a href="StructureDefinition-patient-oontop.html">oontop Patient</a> (per meta)</li></ul>
-
+<h2><a href="Patient-Patient-oontop-Min.html">fsh-generated/resources/Patient-Patient-oontop-Min.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>Patient: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/patient.html">Patient</a> and <i>this.</i><a href="StructureDefinition-patient-oontop.html">oontop Patient</a> (per meta)</li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_practitioner-Oontop-Practitioner-Example"> </a>
+<h2><a href="Practitioner-Oontop-Practitioner-Example.html">fsh-generated/resources/Practitioner-Oontop-Practitioner-Example.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>Practitioner: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a> and hl7.fhir.us.core.<a href="http://hl7.org/fhir/us/core/2021Jan/StructureDefinition-us-core-practitioner.html">US Core Practitioner Profile</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Practitioner.identifier[0] (l10/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</b> <span id="sl3" class="flip" onclick="flip('l3')">Show Reasoning</span><div id="l3" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner<ul><li>Practitioner.identifier[0]: discriminator = true and $this.where(system = 'http://hl7.org/fhir/sid/us-npi').exists()</li></ul></div></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b><a href="">Practitioner.identifier[1] (l14/c6)</a></b></td><td><b>Slicing Information</b></td><td><b>This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</b> <span id="sl4" class="flip" onclick="flip('l4')">Show Reasoning</span><div id="l4" style="display: none"><p>&nbsp;</p>This element does not match any known slicedefined_in_the_profilehttp://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner<ul><li>Practitioner.identifier[1]: discriminator = true and $this.where(system = 'http://hl7.org/fhir/sid/us-npi').exists()</li></ul></div></td>
    </tr>
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-call-reason"> </a>
-<h2><a href="StructureDefinition-oontop-call-reason.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-call-reason.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-oontop-call-reason.html">fsh-generated/resources/StructureDefinition-oontop-call-reason.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
    </tr>
 </table>
 <hr/>
+<a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-consent"> </a>
+<h2><a href="StructureDefinition-oontop-consent.html">fsh-generated/resources/StructureDefinition-oontop-consent.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier)</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_IDENTIFIER_IETF_SYSTEM_VALUE"><b>if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)</b></td>
+   </tr>
+</table>
+<hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-diagnosis"> </a>
-<h2><a href="StructureDefinition-oontop-diagnosis.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-diagnosis.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-oontop-diagnosis.html">fsh-generated/resources/StructureDefinition-oontop-diagnosis.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -266,9 +363,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-pain-score"> </a>
-<h2><a href="StructureDefinition-oontop-pain-score.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-pain-score.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-oontop-pain-score.html">fsh-generated/resources/StructureDefinition-oontop-pain-score.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -276,9 +373,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-treatment-plan"> </a>
-<h2><a href="StructureDefinition-oontop-treatment-plan.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-treatment-plan.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-oontop-treatment-plan.html">fsh-generated/resources/StructureDefinition-oontop-treatment-plan.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -286,9 +383,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-oontop-vital-signs-panel"> </a>
-<h2><a href="StructureDefinition-oontop-vital-signs-panel.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-oontop-vital-signs-panel.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-oontop-vital-signs-panel.html">fsh-generated/resources/StructureDefinition-oontop-vital-signs-panel.json</a> <span id="svi23" class="toggle" onclick="toggle('vi23')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi23')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi23"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -296,9 +393,9 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_fsh-generated_resources_structuredefinition-patient-oontop"> </a>
-<h2><a href="StructureDefinition-patient-oontop.html">/Users/diego/Dropbox/OONTOP/OOntopIG/fsh-generated/resources/StructureDefinition-patient-oontop.json</a></h2>
- <ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-
+<h2><a href="StructureDefinition-patient-oontop.html">fsh-generated/resources/StructureDefinition-patient-oontop.json</a> <span id="svi24" class="toggle" onclick="toggle('vi24')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi24')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi24"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -306,7 +403,8 @@
 </table>
 <hr/>
 <a name="_Users_diego_Dropbox_OONTOP_OOntopIG_input_ImplementationGuide-com.oontop"> </a>
-<h2><a href="ImplementationGuide-com.oontop.html">/Users/diego/Dropbox/OONTOP/OOntopIG/input/ImplementationGuide-com.oontop.json</a></h2>
+<h2><a href="ImplementationGuide-com.oontop.html">input/ImplementationGuide-com.oontop.json</a> <span id="svi25" class="toggle" onclick="toggle('vi25')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi25')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi25"></div>
  <table class="grid">
    <tr>
      <td>&check;</td>
@@ -316,5 +414,24 @@
 <p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
 <p>No suppressed messsages</p><a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="TYPE_SPECIFIC_CHECKS_DT_IDENTIFIER_IETF_SYSTEM_VALUE"> </a>
+<h2>TYPE_SPECIFIC_CHECKS_DT_IDENTIFIER_IETF_SYSTEM_VALUE</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-oontop-consent.html">fsh-generated/resources/StructureDefinition-oontop-consent.json</a></td><td><b>if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_PassThrough_TX_Message"> </a>
+<h2>Terminology_PassThrough_TX_Message</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="Appointment-Oontop-Appointment-Example.html">fsh-generated/resources/Appointment-Oontop-Appointment-Example.json</a></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="Appointment-Oontop-Appointment-Example.html">fsh-generated/resources/Appointment-Oontop-Appointment-Example.json</a></td><td><b>The display &quot;General practice&quot; is not a valid display for the code {http://snomed.info/sct}394814009 - should be one of [General practice (specialty) (qualifier value), General practice (specialty)] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#394814009'</b></td>
+   </tr>
+</table>
 </body>
 </html>

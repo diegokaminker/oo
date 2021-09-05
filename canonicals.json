@@ -14,6 +14,13 @@
     "name": "Oontop_Call_Reason"
   },
   {
+    "id": "oontop-consent",
+    "type": "StructureDefinition",
+    "url": "http://oontop.com/fhir/ig/StructureDefinition/oontop-consent",
+    "version": "0.5.0",
+    "name": "Oontop_Consent"
+  },
+  {
     "id": "oontop-diagnosis",
     "type": "StructureDefinition",
     "url": "http://oontop.com/fhir/ig/StructureDefinition/oontop-diagnosis",

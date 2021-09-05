@@ -1,0 +1,99 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://oontop.com/Appointment/Oontop-Appointment-Example> a fhir:Appointment;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Oontop-Appointment-Example"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: booked</p><p><b>serviceCategory</b>: <span title=\"Codes: {http://snomed.info/sct 394814009}\">General practice</span></p><p><b>serviceType</b>: <span title=\"Codes: {http://snomed.info/sct 394814009}\">General practice</span></p><p><b>specialty</b>: <span title=\"Codes: {http://snomed.info/sct 394814009}\">General practice</span></p><p><b>appointmentType</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0276 FOLLOWUP}\">A follow up visit from a previous appointment</span></p><p><b>description</b>: Discussion on the results of your recent MRI</p><p><b>start</b>: Dec 10, 2021, 6:00:00 AM</p><p><b>end</b>: Dec 10, 2021, 8:00:00 AM</p><p><b>created</b>: 2021-10-10</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Patient-Patient-oontop-Min.html\">Generated Summary: Medical Record Number: 1032702 (USUAL); active; Amy V. Shaw ; gender: female; birthDate: 1987-02-20</a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>type</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ParticipationType ATND}\">attender</span></p><p><b>actor</b>: <a href=\"Practitioner-Oontop-Practitioner-Example.html\">Generated Summary: id: 9941339108, id: 25456; Ronald Bone </a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Location-Oontop-Location-Example.html\">Generated Summary: id: B1-S.F2; status: active; name: South Wing, second floor; alias: BU MC, SW, F2, alias: Burgers University Medical Center, South Wing, second floor; description: Second floor of the Old South Wing, formerly in use by Psychiatry; mode: instance; Phone: 2328; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/location-physical-type wi}\">Wing</span></a></p><p><b>required</b>: required</p><p><b>status</b>: accepted</p></blockquote></div>"
+  ];
+  fhir:Appointment.status [ fhir:value "booked"];
+  fhir:Appointment.serviceCategory [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:394814009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394814009" ];
+       fhir:Coding.display [ fhir:value "General practice" ]
+     ]
+  ];
+  fhir:Appointment.serviceType [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:394814009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394814009" ];
+       fhir:Coding.display [ fhir:value "General practice" ]
+     ]
+  ];
+  fhir:Appointment.specialty [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:394814009;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "394814009" ];
+       fhir:Coding.display [ fhir:value "General practice" ]
+     ]
+  ];
+  fhir:Appointment.appointmentType [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0276" ];
+       fhir:Coding.code [ fhir:value "FOLLOWUP" ];
+       fhir:Coding.display [ fhir:value "A follow up visit from a previous appointment" ]
+     ]
+  ];
+  fhir:Appointment.description [ fhir:value "Discussion on the results of your recent MRI"];
+  fhir:Appointment.start [ fhir:value "2021-12-10T09:00:00Z"^^xsd:dateTime];
+  fhir:Appointment.end [ fhir:value "2021-12-10T11:00:00Z"^^xsd:dateTime];
+  fhir:Appointment.created [ fhir:value "2021-10-10"^^xsd:date];
+  fhir:Appointment.participant [
+     fhir:index 0;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://oontop.com/Patient/Patient-oontop-Min>;
+       fhir:Reference.reference [ fhir:value "Patient/Patient-oontop-Min" ]
+     ];
+     fhir:Appointment.participant.required [ fhir:value "required" ];
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ], [
+     fhir:index 1;
+     fhir:Appointment.participant.type [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ParticipationType" ];
+         fhir:Coding.code [ fhir:value "ATND" ]
+       ]
+     ];
+     fhir:Appointment.participant.actor [
+       fhir:link <http://oontop.com/Practitioner/Oontop-Practitioner-Example>;
+       fhir:Reference.reference [ fhir:value "Practitioner/Oontop-Practitioner-Example" ]
+     ];
+     fhir:Appointment.participant.required [ fhir:value "required" ];
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ], [
+     fhir:index 2;
+     fhir:Appointment.participant.actor [
+       fhir:link <http://oontop.com/Location/Oontop-Location-Example>;
+       fhir:Reference.reference [ fhir:value "Location/Oontop-Location-Example" ]
+     ];
+     fhir:Appointment.participant.required [ fhir:value "required" ];
+     fhir:Appointment.participant.status [ fhir:value "accepted" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://oontop.com/Appointment/Oontop-Appointment-Example.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
